@@ -8,25 +8,27 @@ inherit_from:
 
 # Common configuration.
 AllCops:
+  TargetRubyVersion: 2.4.2
   # Include gemspec and Rakefile
   Include:
-    - '**/*.gemspec'
+    - "**/*.gemspec"
   Exclude:
-    - 'vendor/**/*'
-    - 'config/unicorn.rb'
-    - 'bin/*'
-    - 'db/**/*'
-    - 'spec/**/*'
-    - 'script/rails'
-    - 'script/cucumber'
-    - 'config/**/*'
-    - 'features/**/*'
-    - 'Gemfile.lock'
-    - 'lib/**/*'
-    - 'Guardfile'
-    - 'Capfile'
-    - 'Rakefile'
-    - 'config.ru'
+    - "vendor/**/*"
+    - "config/unicorn.rb"
+    - "bin/*"
+    - "db/**/*"
+    - "spec/**/*"
+    - "script/rails"
+    - "script/cucumber"
+    - "config/**/*"
+    - "features/**/*"
+    - "Gemfile"
+    - "Gemfile.lock"
+    - "lib/**/*"
+    - "Guardfile"
+    - "Capfile"
+    - "Rakefile"
+    - "config.ru"
 Documentation:
     Enabled: false
 # By default, the rails cops are not run. Override in project or home
@@ -233,7 +235,7 @@ Layout/EmptyLinesAroundModuleBody:
   SupportedStyles:
     - no_empty_lines
 
-# Checks whether the source file has a utf-8 encoding comment or not
+# # Checks whether the source file has a utf-8 encoding comment or not
 # Style/Encoding:
 #   EnforcedStyle: when_needed
 #   SupportedStyles:
@@ -276,8 +278,8 @@ Style/HashSyntax:
     - ruby19
     - hash_rockets
 
-Style/IfUnlessModifier:
-  Metrics/LineLength: Max
+Metrics/LineLength:
+  Max: 80
 
 # Checks the indentation of the first key in a hash literal.
 Layout/IndentHash:
@@ -502,8 +504,8 @@ Naming/VariableName:
     - snake_case
     - camelCase
 
-Style/WhileUntilModifier:
-  Metrics/LineLength: Max
+Metrics/LineLength:
+  Max: 80
 
 Style/WordArray:
   MinSize: 0

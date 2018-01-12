@@ -1,0 +1,16 @@
+vi:
+  static_pages:
+    home:
+      des: "Trang chủ | Hướng dẫn tạo ứng dụng mẫu bằng Ruby on Rails"
+      open: "Đây là trang chủ của"
+      link: "Hướng dẫn Ruby on Rails"
+      end: "ứng dụng mẫu"
+      title: "Ứng dụng mẫu"
+    help:
+      des: "Trợ giúp | Hướng dẫn tạo ứng dụng mẫu bằng Ruby on Rails"
+      open: "Nhận trợ giúp hướng dẫn Ruby on Rails từ"
+      link1: "Trang trợ giúp hướng dẫn Rails"
+      middle: "Để được trợ giúp về ứng dụng mẫu này, hay xem phần"
+      link2: "Hướng dẫn Ruby on Rails"
+      end: "sách"
+      title: "Trợ giúp"
