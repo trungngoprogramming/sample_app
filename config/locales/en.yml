@@ -48,6 +48,12 @@ en:
       end: "book"
   layouts:
     header:
+      user: "User"
+      account: "Account"
+      profile: "Profile"
+      setting: "Settings"
+      login: "Login"
+      logout: "Logout"
       title: "SAMPLE APP"
       home: "Home"
       help: "Help"
@@ -56,10 +62,20 @@ en:
       lan: "Language"
   users:
     new:
-      success: "Welcome to the Sample App!"
       title: "Sign Up"
       name: "Name"
       email: "Email"
       password: "Password"
       password_confirm: "Password Confirm"
       submit: "Create Account"
+  controllers:
+    users:
+      sorry: "Sory! we not found user"
+      success: "Welcome to the Sample App!"
+      error: "Invalid Emal/Password Combination"
+  sessions:
+    new:
+      title: "Sign In"
+      email: "Email"
+      password: "Password"
+      submit: "Login"

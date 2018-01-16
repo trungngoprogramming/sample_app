@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     if @user
       render :show
     else
-      flash[:danger] = t("static_pages.home.sorry")
+      flash.now[:danger] = t("controllers.users.sorry")
       render "static_pages/home"
     end
   end
@@ -16,7 +16,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      flash[:success] = t("users.new.success")
+      log_in @user
+      flash[:success] = t("controllers.users.success")
       redirect_to @user
     else
       render :new
