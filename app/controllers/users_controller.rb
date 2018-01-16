@@ -12,10 +12,10 @@ class UsersController < ApplicationController
 
   def destroy
     if @user.destroy
-      flash[:success] = t("controllers.users.user_destroy")
+      flash[:success] = t "controllers.users.user_destroy"
       redirect_to users_url
     else
-      flash[:danger] = t "controllers.users.user_does_not_destroy"
+      flash[:danger] = t "controllers.users.user_has_not_destroy"
       render :show
     end
   end
@@ -27,9 +27,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      log_in @user
-      flash[:success] = t("controllers.users.welcome_to_app")
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = t "controllers.users.please_check_email"
+      redirect_to root_url
     else
       render :new
     end
@@ -39,7 +39,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update_attributes user_params
-      flash[:success] = t("controllers.users.change_password_success")
+      flash[:success] = t "controllers.users.change_password_success"
       redirect_to @user
     else
       render :edit
@@ -50,13 +50,13 @@ class UsersController < ApplicationController
 
   def admin_user
     return if current_user.admin?
-    flash.now[:danger] = t("controllers.users.you_not_admin")
+    flash.now[:danger] = t "controllers.users.you_not_admin"
   end
 
   def correct_user
     @user = User.find_by(id: params[:id])
     return if @user
-    flash.now[:danger] = t("controllers.users.not_found_user")
+    flash.now[:danger] = t "controllers.users.not_found_user"
     render "static_pages/home"
   end
 
@@ -67,7 +67,7 @@ class UsersController < ApplicationController
 
   def logged_in_user
     return if logged_in?
-    flash[:danger] = t("controllers.users.please_login")
+    flash[:danger] = t "controllers.users.please_login"
     redirect_to login_url
   end
 end

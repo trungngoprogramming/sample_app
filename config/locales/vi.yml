@@ -90,9 +90,19 @@ vi:
       change_password_success: "Thay đổi mật khẩu thành công"
       please_login: "Xin hãy đăng nhập"
       user_destroy: "Đã xóa người dùng"
+      please_check_email: "Xin hãy kiểm tra email"
+    account_activations:
+      account_activated: "Đã kích hoạt tài khoản!"
+      invalid_activation_link: "Địa chỉ kích hoạt không hợp lệ"
   sessions:
     new:
       title: "Đăng Nhập"
       email: "Thư điện tử"
       password: "Mật khẩu"
       submit: "Đăng nhập"
+  user_mailer:
+    account_activation:
+      title: "Ứng dụng mẫu"
+      hi: "Chào "
+      welcome_account_activation: "Chào mừng bạn tới ứng dụng mẫu! Nhấn dòng địa chỉ bên dưói để kích hoạt tài khoản"
+      activate: "Kích hoạt"

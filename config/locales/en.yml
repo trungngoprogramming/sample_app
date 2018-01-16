@@ -90,9 +90,19 @@ en:
       change_password_success: "Change password success"
       please_login: "Please Login"
       user_destroy: "User Destroy"
+      please_check_email: "Please check your Email"
+    account_activations:
+      account_activated: "Account activated!"
+      invalid_activation_link: "Invalid activation link"
   sessions:
     new:
       title: "Sign In"
       email: "Email"
       password: "Password"
       submit: "Login"
+  user_mailer:
+    account_activation:
+      title: "Sample App"
+      hi: "Hi "
+      welcome_account_activation: "Welcome to the Sample App! Click on the link below to activate your account:"
+      activate: "Activate"

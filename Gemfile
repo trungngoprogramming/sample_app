@@ -40,6 +40,8 @@ gem "jquery-rails", "4.3.1"
 
 gem "faker", "1.7.3"
 
+gem "figaro", "1.1.1"
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
