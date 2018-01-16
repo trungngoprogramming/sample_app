@@ -70,9 +70,8 @@ en:
       submit: "Create Account"
   controllers:
     users:
-      sorry: "Sory! we not found user"
-      success: "Welcome to the Sample App!"
-      error: "Invalid Emal/Password Combination"
+      not_found_user: "Sory! we not found user"
+      welcome_to_app: "Welcome to the Sample App!"
   sessions:
     new:
       title: "Sign In"

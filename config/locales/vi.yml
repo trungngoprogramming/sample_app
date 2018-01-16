@@ -70,9 +70,8 @@ vi:
       submit: "Tạo tài khoản"
   controllers:
     users:
-      sorry: "Xin lỗi! Chúng tôi không tìm thấy người dùng"
-      success: "Chào mừng bạn đến với Ứng dụng mẫu"
-      error: "Email hoặc mật khẩu không hợp lệ"
+      not_found_user: "Xin lỗi! Chúng tôi không tìm thấy người dùng"
+      welcome_to_app: "Chào mừng bạn đến với Ứng dụng mẫu"
   sessions:
     new:
       title: "Đăng Nhập"

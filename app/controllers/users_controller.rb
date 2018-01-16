@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     if @user
       render :show
     else
-      flash.now[:danger] = t("controllers.users.sorry")
+      flash.now[:danger] = t("controllers.users.not_found_user")
       render "static_pages/home"
     end
   end
@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     @user = User.new user_params
     if @user.save
       log_in @user
-      flash[:success] = t("controllers.users.success")
+      flash[:success] = t("controllers.users.welcome_to_app")
       redirect_to @user
     else
       render :new
