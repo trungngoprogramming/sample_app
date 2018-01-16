@@ -20,3 +20,10 @@ user:
 admin:
   email:
     default: "trungngo1996dn@gmail.com"
+microposts:
+  content:
+    max_length: 140
+  gravatar_size:
+    default: 50
+  picture:
+    size: 5
