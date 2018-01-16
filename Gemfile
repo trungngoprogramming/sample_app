@@ -13,11 +13,15 @@ gem "bcrypt", "3.1.11"
 
 gem "config"
 
+gem "carrierwave", "1.2.2"
+
 gem "rubocop", "~> 0.52.1", require: false
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "rails", "~> 5.1.4"
 # Use mysql as the database for Active Record
 gem "mysql2", ">= 0.3.18", "< 0.5"
+
+gem "mini_magick", "4.7.0"
 # Use Puma as the app server
 gem "puma", "~> 3.7"
 # Use SCSS for stylesheets
