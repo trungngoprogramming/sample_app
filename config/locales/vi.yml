@@ -1,6 +1,7 @@
 vi:
   static_pages:
     home:
+      sorry: "Xin lỗi! Chúng tôi không tìm thấy người dùng"
       des: "Trang chủ | Hướng dẫn tạo ứng dụng mẫu bằng Ruby on Rails"
       open: "Đây là trang chủ của"
       link: "Hướng dẫn Ruby on Rails"
@@ -23,3 +24,12 @@ vi:
       login: "Đăng nhập"
     footer:
       lan: "Ngôn ngữ"
+  users:
+    new:
+      success: "Chào mừng bạn đến với Ứng dụng mẫu"
+      title: "Đăng Ký"
+      name: "Tên"
+      email: "Thư điện tử"
+      password: "Mật khẩu"
+      password_confirm: "Xác nhận mật khẩu"
+      submit: "Tạo tài khoản"
