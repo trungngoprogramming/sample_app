@@ -1,0 +1,6 @@
+validate_name:
+  max: 50
+validate_email:
+  max: 250
+validate_password:
+  min: 6
