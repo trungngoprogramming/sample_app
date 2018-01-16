@@ -31,6 +31,7 @@
 en:
   static_pages:
     home:
+      sorry: "Sory! we not found user"
       des: "Home | Ruby on Rails Tutorial Sample App"
       open: "This is the home page for the"
       link: "Ruby on Rails Tutorial"
@@ -53,3 +54,12 @@ en:
       login: "Log in"
     footer:
       lan: "Language"
+  users:
+    new:
+      success: "Welcome to the Sample App!"
+      title: "Sign Up"
+      name: "Name"
+      email: "Email"
+      password: "Password"
+      password_confirm: "Password Confirm"
+      submit: "Create Account"
