@@ -61,6 +61,11 @@ en:
     footer:
       lan: "Language"
   users:
+    user:
+      delete: "Delete"
+      you_sure?: "You Sure?"
+    index:
+      all_user: "All User"
     new:
       title: "Sign Up"
       name: "Name"
@@ -68,13 +73,36 @@ en:
       password: "Password"
       password_confirm: "Password Confirm"
       submit: "Create Account"
+    edit:
+      title: "Edit"
+      update_your_profile: "Update Your Profile"
+      name: "Name"
+      email: "Email"
+      password: "Password"
+      password_confirmation: "Password Confirmation"
+      save_changes: "Save Changes"
+      change: "Change"
   controllers:
     users:
-      not_found_user: "Sory! we not found user"
+      wrong_email_password: "Email or Password is wrong!"
+      not_found_user: "Sory! Don't Find"
       welcome_to_app: "Welcome to the Sample App!"
+      change_password_success: "Change password success"
+      please_login: "Please Login"
+      user_destroy: "User Destroy"
+      please_check_email: "Please check your Email"
+    account_activations:
+      account_activated: "Account activated!"
+      invalid_activation_link: "Invalid activation link"
   sessions:
     new:
       title: "Sign In"
       email: "Email"
       password: "Password"
       submit: "Login"
+  user_mailer:
+    account_activation:
+      title: "Sample App"
+      hi: "Hi "
+      welcome_account_activation: "Welcome to the Sample App! Click on the link below to activate your account:"
+      activate: "Activate"

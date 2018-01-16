@@ -9,3 +9,7 @@ user:
     default: 80
   url:
     gravatar: "https://secure.gravatar.com/avatar/"
+  per_page:
+    size: 4
+  gravatar:
+    size: 50
