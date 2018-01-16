@@ -5,3 +5,7 @@ user:
     max_length: 255
   password:
     min_length: 6
+  gravatar_size:
+    default: 80
+  url:
+    gravatar: "https://secure.gravatar.com/avatar/"
