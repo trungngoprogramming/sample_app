@@ -1,11 +1,22 @@
 class UsersController < ApplicationController
-  def show
-    @user = User.find_by(id: params[:id])
-    if @user
-      render :show
+  before_action :logged_in_user, only: %i(index edit update)
+  before_action :correct_user, except: %i(index create new)
+  before_action :admin_user, only: %i(destroy)
+
+  def index
+    @users = User.order(name: :asc).paginate(page: params[:page],
+      per_page: Settings.user.per_page.size)
+  end
+
+  def show; end
+
+  def destroy
+    if @user.destroy
+      flash[:success] = t("controllers.users.user_destroy")
+      redirect_to users_url
     else
-      flash.now[:danger] = t("controllers.users.not_found_user")
-      render "static_pages/home"
+      flash[:danger] = t "controllers.users.user_does_not_destroy"
+      render :show
     end
   end
 
@@ -24,8 +35,39 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit; end
+
+  def update
+    if @user.update_attributes user_params
+      flash[:success] = t("controllers.users.change_password_success")
+      redirect_to @user
+    else
+      render :edit
+    end
+  end
+
+  private
+
+  def admin_user
+    return if current_user.admin?
+    flash.now[:danger] = t("controllers.users.you_not_admin")
+  end
+
+  def correct_user
+    @user = User.find_by(id: params[:id])
+    return if @user
+    flash.now[:danger] = t("controllers.users.not_found_user")
+    render "static_pages/home"
+  end
+
   def user_params
     params.require(:user).permit(:name, :email, :password,
       :password_confirmation)
+  end
+
+  def logged_in_user
+    return if logged_in?
+    flash[:danger] = t("controllers.users.please_login")
+    redirect_to login_url
   end
 end

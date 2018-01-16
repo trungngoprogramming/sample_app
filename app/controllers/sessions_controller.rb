@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
   private
 
   def invalid_email_password
-    flash.now[:danger] = t("controllers.users.not_found_user")
+    flash.now[:danger] = t("controllers.users.wrong_email_password")
     render :new
   end
 
