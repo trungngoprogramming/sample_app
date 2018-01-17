@@ -1,0 +1,15 @@
+<% debugger %>
+<%= provide(:title, @user.name) %>
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="user-info">
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+      </h1>
+    </div>
+  </div>
+</div>
+
+
