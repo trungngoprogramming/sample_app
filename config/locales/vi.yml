@@ -61,6 +61,11 @@ vi:
     footer:
       lan: "Ngôn ngữ"
   users:
+    user:
+      delete: "Xóa"
+      you_sure?: "Bạn chắc chắn?"
+    index:
+      all_user: "Tất cả người dùng"
     new:
       title: "Đăng Ký"
       name: "Tên"
@@ -68,13 +73,36 @@ vi:
       password: "Mật khẩu"
       password_confirm: "Xác nhận mật khẩu"
       submit: "Tạo tài khoản"
+    edit:
+      title: "Chỉnh sửa"
+      update_your_profile: "Thay đổi hồ sơ"
+      name: "Tên"
+      email: "Thư điện tử"
+      password: "Mật khẩu"
+      password_confirmation: "Nhập lại mật khẩu"
+      save_changes: "Lưu thay đổi"
+      change: "Chỉnh sửa"
   controllers:
     users:
-      not_found_user: "Xin lỗi! Chúng tôi không tìm thấy người dùng"
+      not_found_user: "Xin lỗi! Không tìm thấy người dùng"
+      wrong_email_password: "Thư điện tử hoặc mật khẩu không đúng"
       welcome_to_app: "Chào mừng bạn đến với Ứng dụng mẫu"
+      change_password_success: "Thay đổi mật khẩu thành công"
+      please_login: "Xin hãy đăng nhập"
+      user_destroy: "Đã xóa người dùng"
+      please_check_email: "Xin hãy kiểm tra email"
+    account_activations:
+      account_activated: "Đã kích hoạt tài khoản!"
+      invalid_activation_link: "Địa chỉ kích hoạt không hợp lệ"
   sessions:
     new:
       title: "Đăng Nhập"
       email: "Thư điện tử"
       password: "Mật khẩu"
       submit: "Đăng nhập"
+  user_mailer:
+    account_activation:
+      title: "Ứng dụng mẫu"
+      hi: "Chào "
+      welcome_account_activation: "Chào mừng bạn tới ứng dụng mẫu! Nhấn dòng địa chỉ bên dưói để kích hoạt tài khoản"
+      activate: "Kích hoạt"

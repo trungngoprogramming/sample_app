@@ -14,8 +14,18 @@ Rails.application.routes.draw do
     post "/login", to: "sessions#create"
 
     delete "/logout", to: "sessions#destroy"
+
+    get "/users", to: "users#index"
+
+    get "/password_resets", to: "password_resets#new"
   end
+    get "/edit", to: "users#edit"
+
+    patch "/edit", to: "users#update"
+
     resources :users
+
+    resources :account_activations, only: [:edit]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
