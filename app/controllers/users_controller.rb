@@ -8,15 +8,20 @@ class UsersController < ApplicationController
       per_page: Settings.user.per_page.size)
   end
 
-  def show; end
+  def show
+    if @user
+      render :show
+    else
+      render "static_pages/home"
+    end
+  end
 
   def destroy
     if @user.destroy
       flash[:success] = t "controllers.users.user_destroy"
       redirect_to users_url
     else
-      flash[:danger] = t "controllers.users.user_has_not_destroy"
-      render :show
+      flash[:danger] = t "controllers.users.user_not_destroy"
     end
   end
 

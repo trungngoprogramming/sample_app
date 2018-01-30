@@ -9,9 +9,14 @@ user:
     default: 80
   remember:
     true?: 1
+  hours:
+    max: 2
   url:
     gravatar: "https://secure.gravatar.com/avatar/"
   per_page:
     size: 4
   gravatar:
     size: 50
+admin:
+  email:
+    default: "trungngo1996dn@gmail.com"
