@@ -18,13 +18,26 @@ class SessionsController < ApplicationController
   private
 
   def invalid_email_password
-    flash.now[:danger] = t("controllers.users.wrong_email_password")
+    flash.now[:danger] = t "controllers.users.wrong_email_password"
     render :new
   end
 
   def valid_email_password user
+    if user.activated?
+      is_remember? user
+    else
+      flash[:warning] = t "controllers.users.account_not_activated"
+      redirect_to root_url
+    end
+  end
+
+  def is_remember? user
     log_in user
+    if params[:session][:remember_me] == Settings.user.remember.true?
+      remember user
+    else
+      forget user
+    end
     redirect_to user
-    params[:session][:remember_me] == "1" ? remember(user) : forget(user)
   end
 end

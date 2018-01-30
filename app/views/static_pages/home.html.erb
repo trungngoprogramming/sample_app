@@ -1,10 +1,10 @@
-<%= provide(:title, t(".des")) %>
+<%= provide :title, t(".des") %>
 <div class="jumbotron center">
-  <h1><%= t(".title") %></h1>
+  <h1><%= t ".title" %></h1>
   <p>
-    <%= t(".open") %>
-    <a href="http://www.railstutorial.org/"><%= t(".link") %></a>
-    <%= t(".end") %>
+    <%= t ".open" %>
+    <a href="http://www.railstutorial.org/"><%= t ".link" %></a>
+    <%= t ".end" %>
   </p>
   <%= link_to t(".sign-up"), signup_path, class: "btn btn-lg btn-primary" %>
 </div>
