@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
   private
 
   def invalid_email_password
-    flash.now[:danger] = t "controllers.users.wrong_email_password"
+    flash.now[:danger] = t "controllers.email.wrong_password"
     render :new
   end
 
@@ -31,7 +31,7 @@ class SessionsController < ApplicationController
   end
 
   def message
-    flash[:warning] = t "account_not_activated_check_your_email"
+    flash[:warning] = t "controllers.email.account_not_activated"
     redirect_to root_url
   end
 

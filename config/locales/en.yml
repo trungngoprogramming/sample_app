@@ -83,17 +83,35 @@ en:
       save_changes: "Save Changes"
       change: "Change"
   controllers:
-    users:
-      wrong_email_password: "Email or Password is wrong!"
+    user:
       not_found_user: "Sory! Don't Find"
       welcome_to_app: "Welcome to the Sample App!"
       change_password_success: "Change password success"
       please_login: "Please Login"
       user_destroy: "User Destroy"
       please_check_email: "Please check your Email"
+      password_has_been_reset: "Password has been reset"
+      cant_be_empty: "Can be empty"
+      password_reset_has_expred: "Password Reset has expred"
+      account_activation: "Account Activation"
+      password_reset: "Password Reset"
+
     account_activations:
       account_activated: "Account activated!"
       invalid_activation_link: "Invalid activation link"
+    microposts:
+      micropost_created: "Micropost Create"
+      micropost_deleted: "Micropost Delete"
+      micropost:
+        posted: "Posted"
+        delete: "Delete"
+        ago: "ago"
+        you_sure?: "Are you sure?"
+    email:
+      account_not_activated: "Account not activated"
+      wrong_password: "Email or Password is wrong!"
+      sent_password_reset: "Success sent email"
+      address_not_found: "Address not found"
   sessions:
     new:
       title: "Sign In"
@@ -106,3 +124,21 @@ en:
       hi: "Hi "
       welcome_account_activation: "Welcome to the Sample App! Click on the link below to activate your account:"
       activate: "Activate"
+  password_resets:
+    edit:
+      title: "Edit"
+      reset_password: "Reset Password"
+      change_password: "Change Password"
+    new:
+      forget_password: "Forget Password"
+      email: "Email"
+      submit: "Submit"
+    shared:
+      error_messages:
+        error: "error"
+      micropost:
+        compose_new_micropost: "Compose new micropost"
+        post: "Post"
+      user_info:
+        view_my_profile: "View My Profile"
+        micropost: "Micropost"
